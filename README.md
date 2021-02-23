@@ -91,12 +91,11 @@ SUBSYSTEMS=="usb", ATTRS{idProduct}=="7523", ATTRS{idVendor}=="1a86", SYMLINK+="
 
 **Run the command:**
 ```
-sudo /etc/init.d/udev reload
-sudo service udev reload
-sudo service udev restart
+sudo udevadm control --reload-rules && sudo service udev restart && sudo udevadm trigger
 ```
 *Once this is completed we have the symlink and better permissions for the arduino or device.*
 
+***Restart** the computer and proceed to the final steps.*
 
 **Run the command:**
 ```
